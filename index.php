@@ -1,7 +1,5 @@
 <?php
 
-//SOLO PUEDES LLAMAR A LOS CONTROLADORES NO ES NECESARO LLAMAR A LA CONEXION NI A LOS MODELOS
-//YA QUE LOS CONTROLADORES ADJUNTAN TODOS ESOS ARCHIVOS
 include_once('controllers/control.php');
 
 //OPCIONALES
@@ -18,9 +16,3 @@ if(!isset($_REQUEST['c'])){//si no existe la ruta ,cargamos por defecto index
    call_user_func(array($controller , $peticion));
 }
 
-/*$con = new Conexion();
-if($con->ConectarBD()){
-  echo'Conectado :)';
-} else {
-   echo 'no Conectado';
-}*/
