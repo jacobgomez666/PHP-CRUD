@@ -15,17 +15,15 @@ HERRAMIENTAS :
 ## Imagenes
 Vitas:
 - 1
-![1](https://user-images.githubusercontent.com/68178186/101994904-1f20c600-3c94-11eb-8d8e-cf65c412638b.PNG)
+![primero](https://user-images.githubusercontent.com/68178186/107870766-54e75400-6e69-11eb-911f-f67957f3846f.PNG)
 - 2
-![2](https://user-images.githubusercontent.com/68178186/101994906-234ce380-3c94-11eb-9a36-43f24bc02d89.PNG)
+![segundo](https://user-images.githubusercontent.com/68178186/107870768-57e24480-6e69-11eb-8be4-34d4abf3c063.PNG)
 - 3
-![3](https://user-images.githubusercontent.com/68178186/101994907-25af3d80-3c94-11eb-9a14-5eb60e8c6df7.PNG)
+![tercero](https://user-images.githubusercontent.com/68178186/107870772-5ca6f880-6e69-11eb-9b1e-3ca37fb4459a.PNG)
 - 4
-![4](https://user-images.githubusercontent.com/68178186/101994911-28119780-3c94-11eb-92b3-76592e221d54.PNG)
+![cuarto](https://user-images.githubusercontent.com/68178186/107870773-5e70bc00-6e69-11eb-952a-21274c2f13a9.PNG)
 - 5
-![6](https://user-images.githubusercontent.com/68178186/101995056-301e0700-3c95-11eb-8358-6e5c87e64526.PNG)
-- 5
-![5](https://user-images.githubusercontent.com/68178186/101994914-2b0c8800-3c94-11eb-9a49-43c39722531d.PNG)
+![quinto](https://user-images.githubusercontent.com/68178186/107870774-616bac80-6e69-11eb-9596-9f244b65ff49.PNG)
 
 
 ### SCRIPT DE LA BASE DE DATOS
