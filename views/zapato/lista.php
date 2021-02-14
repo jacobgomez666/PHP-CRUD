@@ -1,6 +1,6 @@
-<?php include_once('./views/templates/header.php'); ?>
+<?php include_once('views/templates/header.php'); ?>
 
-<?php include_once('./views/templates/nav.php'); ?>
+<?php include_once('views/templates/nav.php'); ?>
 
 <section>
   <div class="container">
@@ -31,7 +31,7 @@
                 <?php foreach ($this->MODEL->listarZapatos() as $new) : ?>
                   <tr>
                     <td><?php echo $new->id; ?></td>
-                    <td><img src=".//<?php echo $new->foto; ?>" class="image__width" alt=""></td>
+                    <td><img src="<?php echo $new->foto; ?>" class="image__width" alt=""></td>
                     <td><?php echo $new->precio; ?></td>
                     <td><?php echo $new->color; ?></td>
                     <td><?php echo $new->estilo; ?></td>
@@ -52,4 +52,4 @@
 </section>
 
 
-<?php include_once('./views/templates/footer.php'); ?>
+<?php include_once('views/templates/footer.php'); ?>

@@ -10,3 +10,20 @@ img{ width: 100%; height: 100%; object-fit: cover;}
     width: 100%;
     height: 150px;
 }
+
+.btn-cliente{
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    transition: all .3s ease-in-out;
+}
+
+.btn-cliente:hover{ background-color: black; color: white;}

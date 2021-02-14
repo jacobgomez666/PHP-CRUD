@@ -1,6 +1,6 @@
-<?php include_once('./views/templates/header.php'); ?>
+<?php include_once('views/templates/header.php'); ?>
 
-<?php include_once('./views/templates/nav.php'); ?>
+<?php include_once('views/templates/nav.php'); ?>
 
 <section class="">
     <div class="container">
@@ -75,7 +75,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <label for="">Imagen Actual</label>
-                                            <img src=".//<?php echo $dataZapato->foto; ?>" class="imagen__update" alt="">
+                                            <img src="<?php echo $dataZapato->foto; ?>" class="imagen__update" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -89,4 +89,4 @@
     </div>
 </section>
 
-<?php include_once('./views/templates/footer.php'); ?>
+<?php include_once('views/templates/footer.php'); ?>

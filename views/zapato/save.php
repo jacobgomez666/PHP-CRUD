@@ -1,6 +1,6 @@
-<?php include_once('./views/templates/header.php'); ?>
+<?php include_once('views/templates/header.php'); ?>
 
-<?php include_once('./views/templates/nav.php'); ?>
+<?php include_once('views/templates/nav.php'); ?>
 
 <section class="">
     <div class="container">
@@ -78,4 +78,4 @@
     </div>
 </section>
 
-<?php include_once('./views/templates/footer.php'); ?>
+<?php include_once('views/templates/footer.php'); ?>
