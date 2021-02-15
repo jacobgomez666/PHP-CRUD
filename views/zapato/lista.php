@@ -2,6 +2,7 @@
 
 <?php include_once('views/templates/nav.php'); ?>
 
+
 <section>
   <div class="container">
     <h1 class="text-center">Lista de zapatos</h1>

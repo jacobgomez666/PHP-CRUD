@@ -5,7 +5,7 @@
 <section class="">
     <div class="container">
         <div class="my-5">
-            <h2 class="text-center">Registro de Usuarios</h2>
+            <h2 class="text-center">Registro de Zapatos</h2>
         </div>
 
         <div class="row">

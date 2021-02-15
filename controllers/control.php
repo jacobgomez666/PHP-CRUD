@@ -23,7 +23,8 @@ class Control
     include_once('views/home.php');
   }
 
-  public function lista(){
+  public function lista()
+  {
     include_once('views/zapato/lista.php');
   }
 
@@ -46,10 +47,11 @@ class Control
       //validando que es imagen true || o false
       $isImagen = getimagesize($_FILES["file"]["tmp_name"]);
 
-      if ($isImagen != false) {
+      if ($isImagen) {
         $size = $_FILES["file"]["size"];
         if ($size > 3000000) {
-          echo "la imagen debe ser menor a 3 megabytes";
+          $msg = "la imagen debe ser menor a 3 megabytes";
+          echo $this->MODEL->error($msg);
         } else {
           if ($tipoArchivo == 'jpg' || $tipoArchivo == 'jpeg' || $tipoArchivo == 'png') {
             if (move_uploaded_file($_FILES['file']['tmp_name'], $archivo)) {
@@ -63,20 +65,30 @@ class Control
                 $alm->setIdestilo($_POST['cboEstilo']);
                 $alm->setIdtalla($_POST['cbotalla']);
                 $alm->setIdgenero($_POST['cbogenero']);
-                $this->MODEL->registrarZapato($alm);
-                header("Location: ?c=lista");
+                $resultado = $this->MODEL->registrarZapato($alm);
+                if ($resultado) {
+                  $msg = "Correctamente";
+                  echo $this->MODEL->success($msg);
+                  include_once('views/zapato/lista.php');
+                }
               } catch (\Throwable $th) {
                 throw $th;
               }
             } else {
-              echo "No se guardo el archivo";
+              $msg = "No se guardo el archivo";
+              echo $this->MODEL->error($msg);
+              include_once('views/zapato/lista.php');
             }
           } else {
-            echo "la imagen debe extencion Jpeg o jpg";
+            $msg = "la imagen debe extencion Jpeg o jpg";
+            echo $this->MODEL->error($msg);
+            include_once('views/zapato/lista.php');
           }
         }
       } else {
-        echo "el documento no es una iamgen";
+        $msg = "el documento no es una imagen";
+        echo $this->MODEL->error($msg);
+        include_once('views/zapato/lista.php');
       }
     } catch (\Throwable $th) {
       throw $th;
@@ -114,7 +126,11 @@ class Control
         $alm->setIdestilo($_POST['cboEstilo']);
         $alm->setIdtalla($_POST['cbotalla']);
         $alm->setIdgenero($_POST['cbogenero']);
-        $this->MODEL->updateZapato($alm);
+        if ($this->MODEL->updateZapato($alm)) {
+          $msg = "Se actualizo Correctamente";
+          echo $this->MODEL->success($msg);
+          include_once('views/zapato/lista.php');
+        }
         header("Location: ?c=lista");
       } else {
         if ($tipoArchivo == 'jpg' || $tipoArchivo == 'jpeg' || $tipoArchivo == 'png') {
@@ -134,21 +150,28 @@ class Control
               $alm->setIdtalla($_POST['cbotalla']);
               $alm->setIdgenero($_POST['cbogenero']);
               $resultado = $this->MODEL->updateZapato($alm);
-              if($resultado){
+              if ($resultado) {
                 unlink($dataZapato->foto);
-                header("Location: ?c=lista");
+                $msg = "Se actualizo Correctamente";
+                echo $this->MODEL->success($msg);
+                include_once('views/zapato/lista.php');
               } else {
-                header("Location: ?c=lista");
+                $msg = "InCorrectamente";
+                echo $this->MODEL->error($msg);
+                include_once('views/zapato/lista.php');
               }
-             
             } catch (\Throwable $th) {
               throw $th;
             }
           } else {
-            echo "No se guardo el archivo";
+            $msg = "No se guardo el archivo";
+            echo $this->MODEL->error($msg);
+            include_once('views/zapato/lista.php');
           }
         } else {
-          echo "la imagen debe extencion Jpeg o jpg";
+          $msg = "la imagen debe extencion Jpeg o jpg";
+          echo $this->MODEL->error($msg);
+          include_once('views/zapato/lista.php');
         }
       }
     } catch (\Throwable $th) {
@@ -164,11 +187,16 @@ class Control
       $alm->setIdzapato($_REQUEST['id']);
       $dataZapato = $this->MODEL->editZapato($alm);
       if (unlink($dataZapato->foto)) {
-        echo "Archivo Eliminado : " . $dataZapato->foto;
-        $this->MODEL->deleteZapato($alm);
-        header("Location: ?c=lista");
+        $resultado = $this->MODEL->deleteZapato($alm);
+        if ($resultado) {
+          $msg = "Eliminado Correctamente";
+          echo $this->MODEL->success($msg);
+          include_once('views/zapato/lista.php');
+        }
       } else {
-        echo "Archivo No Eliminado.....";
+        $msg = "Archivo No Eliminado.....";
+        echo $this->MODEL->error($msg);
+        include_once('views/zapato/lista.php');
       }
     } catch (\Throwable $th) {
       throw $th;

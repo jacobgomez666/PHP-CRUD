@@ -10,10 +10,10 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?c=nuevo">Registrar</a>
+          <a class="nav-link" href="index.php?c=nuevo">Registrar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?c=lista">Lista de Zapatos</a>
+          <a class="nav-link" href="index.php?c=lista">Lista de Zapatos</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
