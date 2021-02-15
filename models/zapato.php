@@ -159,13 +159,13 @@ class Zapato
     echo $resultado;
   }
 
-  public function error($message) {
-    $resultado = `
+  public function error($message='') {
+    $resultado = '
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
-         <strong>Message!</strong> {$message}
+         <strong>Message!</strong> '.$message.'
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    `;
+    ';
     echo $resultado;
   }
 }
