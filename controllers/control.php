@@ -46,8 +46,7 @@ class Control
 
       //validando que es imagen true || o false
       $isImagen = getimagesize($_FILES["file"]["tmp_name"]);
-
-      if ($isImagen) {
+      if ($isImagen && $_FILES['file']['name']) {
         $size = $_FILES["file"]["size"];
         if ($size > 3000000) {
           $msg = "la imagen debe ser menor a 3 megabytes";
@@ -114,7 +113,6 @@ class Control
       $tipoArchivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
 
       if ($archivo == '') {
-        echo "Sin Archivo";
         $alm = new ZapatoClass();
         $alm->setIdzapato($_POST['txtidZapato']);
         $dataZapato = $this->MODEL->editZapato($alm);
@@ -131,7 +129,6 @@ class Control
           echo $this->MODEL->success($msg);
           include_once('views/zapato/lista.php');
         }
-        header("Location: ?c=lista");
       } else {
         if ($tipoArchivo == 'jpg' || $tipoArchivo == 'jpeg' || $tipoArchivo == 'png') {
           $directorio = "uploads/";

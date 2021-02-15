@@ -8,7 +8,7 @@ class Conexion {
     private $PUERTO ;
     private $USUARIO ;
     private $CLAVE ;
-    private $CODIFICACION;
+    private $CODIFICACION ;
 
     private $configuracion = [
      'drive'    => 'mysql',
