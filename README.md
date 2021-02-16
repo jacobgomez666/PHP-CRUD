@@ -132,7 +132,7 @@ ADD CONSTRAINT UK_id_zapato UNIQUE KEY(id);
 #----------------------------------------------------------------------
 						
 #----------------------------------------------------------------------
-#LLAVES FORANEAS
+#INSERT
 #----------------------------------------------------------------------
  INSERT INTO dbotalla(talla) VALUES('45');
  INSERT INTO dbotalla(talla) VALUES('44');
@@ -155,7 +155,7 @@ ADD CONSTRAINT UK_id_zapato UNIQUE KEY(id);
 
 
 #----------------------------------------------------------------------
-#LLAVES FORANEAS
+#SELECT
 #----------------------------------------------------------------------
  SELECT * FROM dboestilo;
  SELECT * FROM dbotalla;
