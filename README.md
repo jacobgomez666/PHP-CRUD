@@ -1,4 +1,5 @@
-# CRUD Básico PHP-PDO
+# CRUD Completo PHP PDO,MVC, Materialize CSS BD Zapatos
+https://youtu.be/PCtqCaQyN7Y
 Crud de imagenes en php.
 ------------
 
